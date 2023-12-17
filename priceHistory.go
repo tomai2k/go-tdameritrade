@@ -89,18 +89,12 @@ func (opts *PriceHistoryOptions) validate() error {
 		if !contains(opts.PeriodType, validPeriodTypes) {
 			return fmt.Errorf("invalid periodType, must have the value of one of the following %v", validPeriodTypes)
 		}
-	} else {
-		opts.PeriodType = defaultPeriodType
 	}
-
 	if opts.FrequencyType != "" {
 		if !contains(opts.FrequencyType, validFrequencyTypes) {
 			return fmt.Errorf("invalid frequencyType, must have the value of one of the following %v", validFrequencyTypes)
 		}
-	} else {
-		opts.FrequencyType = defaultFrequencyType
 	}
-
 	return nil
 }
 
