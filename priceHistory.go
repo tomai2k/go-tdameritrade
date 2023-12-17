@@ -67,7 +67,6 @@ func (s *PriceHistoryService) PriceHistory(ctx context.Context, symbol string, o
 		u = fmt.Sprintf("%s?%s", u, q.Encode())
 	}
 
-	fmt.Println("URL=", u)
 	req, err := s.client.NewRequest("GET", u, nil)
 	if err != nil {
 		return nil, nil, err
