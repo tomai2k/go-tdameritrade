@@ -72,7 +72,7 @@ type ExpDateOption struct {
 	TimeValue              float64     `json:"timeValue"`
 	TheoreticalOptionValue interface{} `json:"theoreticalOptionValue"`
 	TheoreticalVolatility  float64     `json:"theoreticalVolatility"`
-	OptionDeliverablesList string      `json:"optionDeliverablesList"`
+	OptionDeliverablesList interface{} `json:"optionDeliverablesList"`
 	StrikePrice            float64     `json:"strikePrice"`
 	ExpirationDate         int         `json:"expirationDate"`
 	DaysToExpiration       int         `json:"daysToExpiration"`
